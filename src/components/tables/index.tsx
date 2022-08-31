@@ -1,7 +1,8 @@
-
+import styles from './index.module.css'
 export interface Props extends React.TableHTMLAttributes<HTMLTableElement> {
-    children: React.ReactElement
-    width?: string
+    children: React.ReactNode
+    width?: number,
+    borderWidth?: number
    
   }
   
@@ -9,17 +10,19 @@ export function Table(props: Props) {
     const { 
       children, 
       className, 
+      width,
+      style,
+      ...rest
   } = props
-  
-     // let _style: React.CSSProperties = style || {}
+      let _style: React.CSSProperties = style || {}
   
       /**Overiding defautls? */
-    //   if(backgroundColor) _style.backgroundColor = backgroundColor
+      if(width) _style.width = width 
     //   if(color) _style.color = color
     //   if (fontSize) _style.fontSize = fontSize
   
     return (
-      <table>
+      <table className={styles.table} style={_style}{...rest}>
             {children}
       </table>
     )
@@ -27,20 +30,24 @@ export function Table(props: Props) {
 
 export function TableHead(props: Props) {
     const { 
-      children, 
-      className, 
+      children,  
   } = props
   
-     // let _style: React.CSSProperties = style || {}
-  
-      /**Overiding defautls? */
-    //   if(backgroundColor) _style.backgroundColor = backgroundColor
-    //   if(color) _style.color = color
-    //   if (fontSize) _style.fontSize = fontSize
-  
     return (
-      <thead>
+      <thead className={styles.thead} >
             {children}
       </thead>
+    )
+  }
+  
+export function TableBody(props: Props) {
+    const { 
+      children,  
+  } = props
+  
+    return (
+      <tbody className={styles.thead}> 
+            {children}
+      </tbody>
     )
   }

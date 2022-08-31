@@ -1,0 +1,16 @@
+@import url('../../App.css');
+
+button{
+    padding: 10px;
+    min-width: 100px;
+    border:none;    
+    border-radius: 3px;
+}
+.primary_button{
+    background-color:var(--primary-color);
+    color: white;
+}
+.icon {
+    width: 20px;
+    height: 20px;
+}

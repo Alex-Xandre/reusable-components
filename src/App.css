@@ -8,4 +8,9 @@
 }
 .App{
   display: flex;
+  position: relative
+}
+tr{
+  border: 1px solid #ddd;
+  padding: 5px;
 }
