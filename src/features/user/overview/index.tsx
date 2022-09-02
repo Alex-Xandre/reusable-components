@@ -8,7 +8,7 @@ const UserTable = () => {
   return (
     <Table width={1000} border={1}style={{border:'1px solid black'}}>
         <TableHead>
-          <tr >
+          <tr>
             <th>Name</th>
             <th>Email</th>
             <th>Contact</th>

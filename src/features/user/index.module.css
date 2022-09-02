@@ -1,6 +1,5 @@
 .container{
     position: relative;
-    background-color: #f5f5fc;
     align-self: center;
     margin: 0 auto;
     max-height: 100vh;
@@ -10,4 +9,7 @@
 
 .container button{
     margin-bottom: 30px;
+}
+tr,td, th{
+    padding: 10px;
 }

@@ -1,0 +1,75 @@
+.input {
+    
+    font-family: 'Poppins', sans-serif;
+    width: 100%;
+  }
+  
+  .input label {
+    position: relative;
+    font-size: 1rem;
+  }
+  
+  .input label input {
+    -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
+    padding: 1em;
+    border-radius: 5px;
+    width: 100%;
+    height: 40px;
+    outline: none;
+    font-size: 1rem;
+    border: 2px solid transparent;
+  }
+  
+  .input label span {
+    position: absolute;
+    top: 50%;
+    left: 22px;
+    -webkit-transform: translate(0, -50%);
+            transform: translate(0, -50%);
+    color: black;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    font-weight: 300;
+    font-size: 0.85rem;
+  }
+  
+  .input label input:not(:placeholder-shown) + span {
+    color: transparent;
+    -webkit-transform: translate3d(0, -6px, 0) scale(0.75);
+            transform: translate3d(0, -6px, 0) scale(0.75);
+  }
+  
+  .input label input:focus {
+    border: 1px solid #00FFd6;
+  }
+  
+  .input label input:focus + span {
+    top: -15px;
+    font-size: 14px;
+    background: white;
+    border-radius: 4px;
+    padding: 0 5px;
+    color: black;
+  }
+  
+  .input label .input_icon {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    -webkit-transform: translate(92%, -50%);
+            transform: translate(92%, -50%);
+    width: 100%;
+    cursor: pointer;
+  }
+  
+  .toast-failed {
+    background: white;
+    color: black;
+  }
+  
+  .toast-success {
+    background: white;
+    color: black;
+  }
+  

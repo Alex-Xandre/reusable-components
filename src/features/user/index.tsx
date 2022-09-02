@@ -5,21 +5,15 @@ import Modal from '../../components/modals'
 import UserTable from './overview'
 import styles from './index.module.css'
 import { openModal } from '../../app/globalslices/modalSlice'
+import AddUsers from './overview/index.adduser'
 
-const AddUsers = () =>{
-  return(
-    <div>
-      hi
-    </div>
-  )
-}
 const Users = () => {
   const dispatch = useDispatch()
   const {isOpen} = useSelector(((store:any) => store.modals))
   return (
     <div className={styles.container}>
       {isOpen ? 
-      <Modal width={1000} height={300}>
+      <Modal width={500} height={300} icon='x' title='Add Users'>
         <AddUsers/>
       </Modal>
       :
